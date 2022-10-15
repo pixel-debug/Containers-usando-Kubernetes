@@ -7,7 +7,7 @@ Objetivo: colocar em prática os conceitos de criação de Containers usando Kub
      * [Arquitetura](#arquitetura-do-kubernetes)
      * [Vantagens](#vantagens) 
    * [Instalações necessárias](#primeiros-passos)  
-   * [Mãos a obra](#maos-a-obra)  
+   * [Mãos a obra](#mãos-a-obra)  
    * [Alunos](#realizado-por)
 <!--te-->
 
@@ -35,13 +35,13 @@ Objetivo: colocar em prática os conceitos de criação de Containers usando Kub
 
 # Primeiros Passos
 
-Rode os seguinte comandos no terminal para instalar a máquina virtual:
+> Rode os seguinte comandos no terminal para instalar a máquina virtual:
 ```sudo apt-get update 
 
   sudo apt-get install virtualbox-6.1
 ```
 
-Para conseguir utilizar o Kubernetes na máquina Linux, copie e cole os seguintes comandos no terminal:
+> Para conseguir utilizar o Kubernetes na máquina Linux, copie e cole os seguintes comandos no terminal:
 
 1.Baixe a versão mais recente
 
@@ -55,13 +55,13 @@ Para conseguir utilizar o Kubernetes na máquina Linux, copie e cole os seguinte
 
 ``` kubectl version --client --output=yaml  ```
 
-Para facilitar o processamento do Kubernetes na máquina local, é recomendado o Minikube. 
+> Para facilitar o processamento do Kubernetes na máquina local, é recomendado o Minikube. 
 
 Caso seu sistema operacional for Linux x86-64, a versão estável mais recente usando arquivo binário pode ser conseguida com o seguinte comando:
 
 ``` kubectl version --client --output=yaml  ```
 
-Obs.: para outras arquiteturas por favor [acesse](https://minikube.sigs.k8s.io/docs/start/).
+>> Obs.: para outras arquiteturas por favor [acesse](https://minikube.sigs.k8s.io/docs/start/).
 
 
 Crie um diretório para a aplicação e nele digite, com acesso de administrador (mas não logado como root):
@@ -71,7 +71,7 @@ Crie um diretório para a aplicação e nele digite, com acesso de administrador
 Esse comando irá criar uma máquina virtual, onde teremos um cluster para trabalhar com nossa aplicação.
 
 
-# Mãos a obra
+# Mãos a Obra
 Depois de tudo instalado e o diretório da aplicação criado, precisamos criar nosso arquivo com as configurações do objeto (POD).
 ```	Arquivo aplicacao.yaml ```
 
@@ -82,9 +82,11 @@ Crie também o objeto deployment, ele será responsável por atualizar o Kuberne
 ``` Arquivo deployment.yaml ```
 
 Isso significa que estamos colocando nosso objeto POD dentro do Deployment, que por sua vez possui mais recursos e conseguirá então, passar o estado desejado que foi configurado para nosso Kubernetes. É possível ver que o segundo _spec_ é basicamente o _spec_ do nosso objeto POD inicial. Agora basta rodar o comando para criar o objeto, em seguida, vamos listar ele:
-``` kubectl create -f deployment.yaml ```
+``` 
+    kubectl create -f deployment.yaml
 
-``` kubectl get pods ```
+    kubectl get pods 
+```
 
 Porém, ainda não é possível acessar a aplicação Web, uma vez que os objetos PODs são instáveis e sofrem constantes alterações. Para isso precisamos criar o objeto service. Ele irá funcionar como um balanceador de cargas e nos permitirá o acesso a aplicação.
 
