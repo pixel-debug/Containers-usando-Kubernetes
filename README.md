@@ -22,6 +22,16 @@ Objetivo: colocar em prática os conceitos de criação de Containers usando Kub
 
 ## Vantagens
 
+- Fácil manipulação de contêineres, que na verdade ocorrem através dos objetos PODS;
+
+- Escalonamento da a aplicação;
+
+- Volumes persistentes;
+
+- Regeneração própria;
+
+- Abstração de complexidade.
+
 # Primeiros Passos
 Para conseguir utilizar o Kubernetes na máquina Linux, copie e cole os seguintes comandos no terminal:
 
