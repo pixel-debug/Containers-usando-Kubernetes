@@ -18,7 +18,7 @@ Objetivo: colocar em prática os conceitos de criação de Containers usando Kub
 
 ## Arquitetura do Kubernetes
 
-![alt text]
+![alt text](https://github.com/pixel-debug/Containers-usando-Kubernetes/blob/master/imagens/arquitetura "Arquitetura)
 
 ## Vantagens
 
