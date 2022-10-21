@@ -41,7 +41,7 @@ Objetivo: colocar em prática os conceitos de criação de Containers usando Kub
 
   sudo apt -y upgrade
   
-  // O seguinte comando irá realizar uma reinsialização, você foi avisado
+  // O seguinte comando irá realizar uma reinicialização, você foi avisado
   
   [ -f /var/run/reboot-required ] && sudo reboot -f
 
@@ -60,8 +60,6 @@ Objetivo: colocar em prática os conceitos de criação de Containers usando Kub
   sudo apt install linux-headers-$(uname -r) dkms
   
   sudo apt install virtualbox-7.0
-  
-  cd~/
   
   wget https://download.virtualbox.org/virtualbox/7.0.0/Oracle_VM_VirtualBox_Extension_Pack-7.0.0.vbox-extpack
   
