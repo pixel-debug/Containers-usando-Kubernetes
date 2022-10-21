@@ -144,4 +144,4 @@ Pronto! Você está rodando uma aplicação Web com Kubernetes!
 
 3. Samuel Correa
 
-4. Tomaz
+4. Tomaz Augusto - 20193016389
