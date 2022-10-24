@@ -100,6 +100,39 @@ Caso seu sistema operacional for Linux x86-64, a versão estável mais recente u
 
 ```
 
+
+4. Instalando Minicube
+
+> Primiera mente para instalar as dependencias do minicube use o comando:
+
+``` 
+  sudo apt install -y curl wget apt-transport-https
+
+``` 
+
+> Apos isso abaixe menicube com o comando:
+
+``` 
+  wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+
+``` 
+
+> Apos isso mova o arquivo e de a ele as permisões necessarias com os comandos:
+
+``` 
+  sudo cp minikube-linux-amd64 /usr/local/bin/minikube
+  sudo chmod +x /usr/local/bin/minikube
+
+``` 
+
+> Iniciando o minicube e fazendo as configurações iniciais com os comandos:
+
+``` 
+  minikube start --driver=docker
+  minikube start --addons=ingress --cpus=2 --cni=flannel --install-addons=true --kubernetes-version=stable --memory=6g
+
+``` 
+
 >> Obs.: para outras arquiteturas por favor [acesse](https://minikube.sigs.k8s.io/docs/start/).
 
 
