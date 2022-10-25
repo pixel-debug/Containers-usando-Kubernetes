@@ -197,7 +197,7 @@ Acessando a URL é possível perceber que o erro 403 Forbidden foi apresentado n
 Pronto! Você está rodando uma aplicação Web com Kubernetes!
 
 # Realizado por
-1. Caio Lott
+1. Caio Lott - 20193001742
 
 2. Marina Bernardes Diniz - 20193008242
 
