@@ -145,6 +145,56 @@ Crie um diretório para a aplicação e nele digite, com acesso de administrador
 
 Esse comando irá criar uma máquina virtual, onde teremos um cluster para trabalhar com nossa aplicação.
 
+5- Instalando o Docker
+
+Preparando o repositório
+
+``` 
+  sudo apt-get update
+  sudo apt-get install \
+      ca-certificates \
+      curl \
+      gnupg \
+      lsb-release
+    
+``` 
+
+Adicionando a chave GPC oficial do docker
+
+``` 
+  sudo mkdir -p /etc/apt/keyrings
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+ 
+``` 
+
+Comandos para configurar o repositório
+
+``` 
+  echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  
+``` 
+
+Instalando o Docker Engine
+
+``` 
+sudo apt-get update
+
+``` 
+
+Instalando o Docker Engine
+
+```
+  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+Conferindo se o docker esta instalado corretamente
+
+```
+sudo docker run hello-world
+
+```
 
 # Mãos a Obra
 Depois de tudo instalado e o diretório da aplicação criado, precisamos criar nosso arquivo com as configurações do objeto (POD).
@@ -201,6 +251,6 @@ Pronto! Você está rodando uma aplicação Web com Kubernetes!
 
 2. Marina Bernardes Diniz - 20193008242
 
-3. Samuel Correa
+3. Samuel Correa - 20193001804
 
 4. Tomaz Augusto - 20193016389
